@@ -34,7 +34,7 @@ class AvengerResource(
             ResponseEntity.ok().body(it)
         }
 
-    @GetMapping("{id}")
+    @GetMapping("{id}/detail")
     fun getAvengerDetails(@PathVariable(value = "id") id: UUID) =
         repository.getDetails(id)
             ?.let {
